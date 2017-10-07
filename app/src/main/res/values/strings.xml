@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">Music Mash</string>
+
+    <string-array name="categories">
+        <item>GYM</item>
+        <item>STUDY</item>
+        <item>RELAX</item>
+        <item>TRAVEL</item>
+    </string-array>
+
+    <string-array name="gym_song_1">
+        <item>Everybody</item>
+        <item>Author</item>
+        <item>everybody_logic</item>
+        <item>https://youtu.be/sUpu7618KrM</item>
+    </string-array>
+
+    <string-array name="gym_song_2">
+        <item>Burn out</item>
+        <item>Deorro</item>
+        <item>burnout_deorro</item>
+        <item>https://youtu.be/jFJEfoCBFIM</item>
+    </string-array>
+
+    <string-array name="gym_song_3">
+        <item>Humble</item>
+        <item>Kendrick Lamar</item>
+        <item>humble</item>
+        <item>https://youtu.be/tvTRZJ-4EyI</item>
+    </string-array>
+
+        <string-array name="gym_song_4">
+        <item>Freaks</item>
+        <item>Timmy Trumpet &amp; Savage</item>
+        <item>freaks</item>
+        <item>https://youtu.be/ofmzX1nI7SE</item>
+    </string-array>
+
+        <string-array name="gym_song_5">
+        <item>Still D.R.E</item>
+        <item>Dr. Dre ft. Snoop Dogg</item>
+        <item>still_dre</item>
+        <item>https://youtu.be/_CL6n0FJZpk</item>
+    </string-array>
+
+    <string-array name="gym_song_6">
+        <item>Power</item>
+        <item>Kanye West</item>
+        <item>power</item>
+        <item>https://youtu.be/L53gjP-TtGE</item>
+    </string-array>
+
+    <string-array name="study_song_1">
+        <item>Make You Feel</item>
+        <item>Alina Baraz &amp; Galimatias</item>
+        <item>make_you_feel</item>
+        <item>https://youtu.be/MUmjKCjeu1A</item>
+    </string-array>
+
+    <string-array name="study_song_2">
+        <item>Touch</item>
+        <item>Haux</item>
+        <item>touch</item>
+        <item>https://youtu.be/876OmD6RFs4</item>
+    </string-array>
+
+    <string-array name="study_song_3">
+        <item>Forest</item>
+        <item>Luvian</item>
+        <item>forest</item>
+        <item>https://youtu.be/dqww0GU5I6E</item>
+    </string-array>
+
+    <string-array name="study_song_4">
+        <item>Daylight</item>
+        <item>Xandra</item>
+        <item>daylight</item>
+        <item>https://www.youtube.com/watch?v=6Vy3Sm9nOLA</item>
+    </string-array>
+
+    <string-array name="study_song_5">
+        <item>Moon Tattoo</item>
+        <item>Sofi Tukker</item>
+        <item>moon_tattoo</item>
+        <item>https://www.youtube.com/watch?v=uc5uRZzDPbs</item>
+    </string-array>
+
+    <string-array name="study_song_6">
+        <item>Alone</item>
+        <item>Kidswaste</item>
+        <item>alone</item>
+        <item>https://www.youtube.com/watch?v=3vUuCmxwdRw</item>
+    </string-array>
+
+    <string-array name="relax_song_1">
+        <item>When Sunny Gets Blue</item>
+        <item>McCoy Tyner</item>
+        <item>when_sunny_gets_blue</item>
+        <item>https://www.youtube.com/watch?v=yFDlnkEwZc8</item>
+    </string-array>
+
+    <string-array name="relax_song_2">
+        <item>I got it bad and that ain\'t good</item>
+        <item>The Oscar Peterson Trio</item>
+        <item>i_got_it_bad</item>
+        <item>https://www.youtube.com/watch?v=3BgvoQzmhIM</item>
+    </string-array>
+
+    <string-array name="relax_song_3">
+        <item>The Nearness Of You</item>
+        <item>Bill Charlap Trio</item>
+        <item>the_nearness_of_you</item>
+        <item>https://www.youtube.com/watch?v=DyAY4QA2unY</item>
+    </string-array>
+
+    <string-array name="relax_song_4">
+        <item>Peace Piece</item>
+        <item>Bill Evans</item>
+        <item>peace_piece</item>
+        <item>https://www.youtube.com/watch?v=Nv2GgV34qIg</item>
+    </string-array>
+
+    <string-array name="relax_song_5">
+        <item>Blue in Green</item>
+        <item>Miles Davis</item>
+        <item>blue_in_green</item>
+        <item>https://www.youtube.com/watch?v=PoPL7BExSQU</item>
+    </string-array>
+
+    <string-array name="relax_song_6">
+        <item>One for my baby</item>
+        <item>Jan Johansson</item>
+        <item>one_for_my_baby</item>
+        <item>https://www.youtube.com/watch?v=dc7K6dGP1s0</item>
+    </string-array>
+
+    <!--<string-array name="travel_song_1">-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+        <!--<item></item>-->
+    <!--</string-array>-->
+
+
+</resources>
