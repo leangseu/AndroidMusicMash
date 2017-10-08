@@ -15,6 +15,9 @@ import android.view.ViewGroup;
 
 import android.widget.GridView;
 
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         ViewPager mViewPager;
         SectionsPagerAdapter mSectionsPagerAdapter;
 
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+
     }
 
     /**

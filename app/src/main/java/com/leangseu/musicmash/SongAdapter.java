@@ -1,10 +1,13 @@
 package com.leangseu.musicmash;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,10 +29,10 @@ public class SongAdapter extends ArrayAdapter<Song> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, final ViewGroup parent) {
         View gridView = convertView;
 
-        Song song = getItem(position);
+        final Song song = getItem(position);
         if (gridView == null) {
             gridView = LayoutInflater.from(getContext()).inflate(R.layout.song_layout, parent, false);
         }
@@ -41,6 +44,19 @@ public class SongAdapter extends ArrayAdapter<Song> {
         title.setText(song.getTitle());
         image.setImageURI(Uri.parse(song.getImage()));
         author.setText(song.getAuthor());
+
+        gridView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("click", song.getTitle());
+
+                Intent i = new Intent(parent.getContext(), YoutubeActivity.class);
+
+                i.putExtra("link", song.getLink());
+
+                parent.getContext().startActivity(i);
+            }
+        });
 
         return gridView;
     }

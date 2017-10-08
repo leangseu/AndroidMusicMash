@@ -12,15 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
-        android:singleLine="true"/>
+        android:maxLines="1"/>
 
     <TextView
         android:id="@+id/song_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/song_title"
-        android:singleLine="true"
-        />
+        android:maxLines="1" />
 
     <ImageView
         android:id="@+id/song_image"
