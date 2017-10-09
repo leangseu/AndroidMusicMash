@@ -9,19 +9,32 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v7.util.SortedList;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 
-import com.google.android.youtube.player.YouTubePlayer;
-import com.google.android.youtube.player.YouTubePlayerView;
+import com.napster.cedar.Napster;
+import com.napster.cedar.player.Player;
+import com.napster.cedar.player.data.Track;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
+
+
 public class MainActivity extends AppCompatActivity {
+
+    public static Metadata metadata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,27 +52,13 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
     public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public PlaceholderFragment() {
         }
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
@@ -72,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            GridView gridView = rootView.findViewById(R.id.grid_layout);
+            GridView gridView = rootView.findViewById(R.id.song_gridview);
+            final ListView listView = rootView.findViewById(R.id.track_lw);
             gridView.setNumColumns(2);
 
             ArrayList<Song> songs = new ArrayList<>();
@@ -104,11 +104,26 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
                 default:
-                    break;
+                    metadata = new Metadata(Constants.NAPSTER_API_KEY);
+
+                    metadata.getTopTracks(new Callback<Tracks>() {
+                        @Override
+                        public void success(Tracks t, Response response) {
+                            TrackAdapter adapter = new TrackAdapter(getContext(), R.layout.track_layout, t.tracks);
+                            listView.setAdapter(adapter);
+                        }
+
+                        @Override
+                        public void failure(RetrofitError error) {
+                            Log.d("response", "fail");
+                        }
+                    });
+                    return rootView;
             }
 
             SongAdapter adapter = new SongAdapter(getContext(), R.layout.song_layout, songs);
             gridView.setAdapter(adapter);
+
 
 
             return rootView;
@@ -142,4 +157,5 @@ public class MainActivity extends AppCompatActivity {
             return categories[position];
         }
     }
+
 }

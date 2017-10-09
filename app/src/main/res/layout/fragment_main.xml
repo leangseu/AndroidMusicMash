@@ -9,8 +9,13 @@
     tools:context="com.leangseu.musicmash.MainActivity$PlaceholderFragment">
 
     <GridView
-        android:id="@+id/grid_layout"
+        android:id="@+id/song_gridview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></GridView>
+
+    <ListView
+        android:id="@+id/track_lw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
 
 </RelativeLayout>

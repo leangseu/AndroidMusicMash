@@ -12,7 +12,6 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
-    private final String API_KEY = "AIzaSyDosNNN-pR_NPuuRZt5ND1HuRt91G5kiDw";
     YouTubePlayerView youtubeView;
     String link;
 
@@ -26,7 +25,7 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
 
         youtubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
 
-        youtubeView.initialize(API_KEY, this);
+        youtubeView.initialize(Constants.YOUTUBE_API_KEY, this);
     }
 
     @Override
@@ -51,7 +50,7 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == -1) {
             // Retry initialization if user performed a recovery action
-            getYouTubePlayerProvider().initialize(API_KEY, this);
+            getYouTubePlayerProvider().initialize(Constants.YOUTUBE_API_KEY, this);
         }
     }
 
