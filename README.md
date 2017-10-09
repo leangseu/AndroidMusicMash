@@ -15,7 +15,7 @@
 
 ![ss1](ss1.png)
 
-- [x] Used [Napster API](https://developer.napster.com/api/v2.2) streaming on the NASPTER tab to show top 20 musics on Naspter
+- [x] Used Napster [API](https://developer.napster.com/api/v2.2) and [SDK](https://github.com/Napster/napster-android-sdk) streaming on the NASPTER tab to show top 20 musics on Naspter
 
 ![ss3](ss3.png)
 
