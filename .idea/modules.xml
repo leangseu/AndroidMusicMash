@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MusicMash.iml" filepath="$PROJECT_DIR$/MusicMash.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidMusicMash.iml" filepath="$PROJECT_DIR$/AndroidMusicMash.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
